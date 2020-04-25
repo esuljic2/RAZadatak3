@@ -53,6 +53,6 @@ public class Instrukcija {
     }
 
     public String getLabela() {
-        return labela;
+        return labela == null ? null : labela.trim().substring(0, labela.length() - 1);
     }
 }
