@@ -1,0 +1,12 @@
+LW R8,0(R0)
+label1: BEQ R4,R5,label2
+OR R6,R0,R0
+ADD R0,R5,R3
+BEQ R4,R0,label1
+label2: LW r8,0(R5)
+SW R4,2(R6)
+label3: BEQ R1,R4,label4
+ADD R8,R3,R3
+Add R0,R4,R3
+BEQ R4,R0,label3
+label4: LW R8,0(R2)

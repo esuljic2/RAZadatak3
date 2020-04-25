@@ -1,0 +1,4 @@
+BEQ R4,R5,LABEL2 || a njena instrukcija zadrske je LW R8,0(R0)
+BEQ R4,R0,LABEL1 || a njena instrukcija zadrske je LW R8,0(R5)
+BEQ R1,R4,LABEL4 || a njena instrukcija zadrske je SW R4,2(R6)
+BEQ R4,R0,LABEL3 || a njena instrukcija zadrske je LW R8,0(R2)
