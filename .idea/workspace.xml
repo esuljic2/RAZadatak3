@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2292473-1bfd-4211-b540-66b03bed4a99" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/instrukcije.txt" beforeDir="false" afterPath="$PROJECT_DIR$/instrukcije.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +73,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587850692688</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Demonstracija sva 3 slucaja">
+      <created>1587851097480</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1587851097480</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -82,7 +89,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Zavrsen zadatak" />
     <MESSAGE value="Trazenje labele fiksirano" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trazenje labele fiksirano" />
+    <MESSAGE value="Demonstracija sva 3 slucaja" />
+    <option name="LAST_COMMIT_MESSAGE" value="Demonstracija sva 3 slucaja" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

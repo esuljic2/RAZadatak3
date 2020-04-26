@@ -77,9 +77,14 @@ public class Main {
                 //brancha zadovoljen
                 Optional<Instrukcija> odredisnaInstrukcija = instrukcije.stream().filter(instrukcija1 -> instrukcija1.getLabela() != null && instrukcija1.getLabela().equals(labelaBrancha)).findFirst();
                 if (odredisnaInstrukcija.isPresent()) {
-                    if (!odredisnaInstrukcija.get().jeLiBranchInstrukcija()) {
-                        instrukcijeSaZadrskama.add(new Pair<>(instrukcija, odredisnaInstrukcija.get()));
-                        continue;
+                    String odredisniRegistar = odredisnaInstrukcija.get().dajOdredisniRegistar();
+                    //Ona moze biti instrukcija zadrske ukoliko ne mijenja registre
+                    //ili ako njen rezultat nije bitan za branch instrukciju
+                    if (odredisniRegistar == null || !instrukcija.daLiKoristiRegistar(odredisniRegistar)) {
+                        if (!odredisnaInstrukcija.get().jeLiBranchInstrukcija()) {
+                            instrukcijeSaZadrskama.add(new Pair<>(instrukcija, odredisnaInstrukcija.get()));
+                            continue;
+                        }
                     }
                 }
 
@@ -87,9 +92,14 @@ public class Main {
                 //ce se izvrsiti ukoliko uslov grananja nije zadovoljen
                 if (i + 1 < instrukcije.size()) {
                     Instrukcija sljedecaInstrukcija = instrukcije.get(i + 1);
-                    if (!sljedecaInstrukcija.jeLiBranchInstrukcija()) {
-                        instrukcijeSaZadrskama.add(new Pair<>(instrukcija, sljedecaInstrukcija));
-                        continue;
+                    String odredisniRegistar = sljedecaInstrukcija.dajOdredisniRegistar();
+                    //Ona moze biti instrukcija zadrske ukoliko ne mijenja registre
+                    //ili ako njen rezultat nije bitan za branch instrukciju
+                    if (odredisniRegistar == null || !instrukcija.daLiKoristiRegistar(odredisniRegistar)) {
+                        if (!sljedecaInstrukcija.jeLiBranchInstrukcija()) {
+                            instrukcijeSaZadrskama.add(new Pair<>(instrukcija, sljedecaInstrukcija));
+                            continue;
+                        }
                     }
                 }
 
